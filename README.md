@@ -1,41 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Globomantics - Next.js 13 Demo Project
+
+This project demonstrates the new features and capabilities of Next.js 13, particularly focusing on the App Router architecture that was introduced as an experimental feature when Next.js 13 was first released.
+
+## Project Overview
+
+Globomantics is a demo application showcasing a fictional company's website with multiple sections including a home page, blog, conference information (with speakers and sessions), and settings. The project serves as an excellent example of how to implement and utilize Next.js 13's new app directory structure.
+
+## Technology Stack
+
+- **Next.js 13.0.2**: Utilizing the experimental App Router (`app/` directory)
+- **React 18.2.0**: For building the user interface components
+- **@next/font**: For optimized font loading and usage
+- **CSS Modules**: For component-scoped styling
+- **Next.js Image Component**: For optimized image loading and display
+
+## Key Features
+
+### App Router Implementation
+
+This project demonstrates the transition from the traditional `pages/` directory to the new `app/` directory structure, which enables:
+
+- Nested layouts with improved composition
+- Co-located components, styles, and tests
+- Server-first approach with Client Components
+- Enhanced routing with support for layouts, nested routing, and more
+
+### Project Structure
+
+- `app/`: Contains all the routes and layouts using the new App Router
+  - `layout.js`: Root layout that wraps all pages
+  - `page.js`: Root page component
+  - `home/`: Home page section
+  - `conference/`: Conference section with nested routes for speakers and sessions
+  - `blog/`: Blog section
+  - `settings/`: Settings section
+
+### Styling Approach
+
+The project uses a combination of:
+- CSS Modules (`.module.css` files) for component-scoped styling
+- Global CSS for application-wide styles
+
+### Image Optimization
+
+Demonstrates Next.js Image component with:
+- Automatic image optimization
+- Lazy loading
+- Placeholder images during loading
+- Responsive images with the `sizes` attribute
 
 ## Getting Started
 
-The `app/` directory can coexist with the existing `pages` directory for incremental adoption. 
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application
 
-The Globomantics conference app for this course will be using the `app/` directory to configure the pages.
+## Key Concepts Demonstrated
 
-1. Install dependencies: `yarn`
-
-2. Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Nested layouts using the App Router
+- Route groups and organization
+- Server and Client Components
+- Data fetching within React components
+- Image optimization with Next.js Image component
+- Navigation using the new Link component
+- CSS Modules for component-level styling
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js 13 Documentation](https://nextjs.org/docs)
+- [App Router Documentation](https://nextjs.org/docs/app)
+- [React 18 Documentation](https://reactjs.org/docs/getting-started.html)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the terms of the license included in the repository.
